@@ -1,0 +1,3 @@
+[submodule "FDS-CourseOne"]
+	path = FDS-CourseOne
+	url = https://github.com/psychdatascience/FDS-CourseOne.git
