@@ -1,0 +1,32 @@
+# AF Stats Tool
+
+Computes summary statistics for a list of numbers.
+
+## Usage
+
+1. Start the tool
+    ```bash
+    python af_stats_tool.py
+    ```
+1. Input the numbers one by one
+    ```
+    Enter a number (or 'done'): 1
+    Enter a number (or 'done'): 2
+    Enter a number (or 'done'): 3
+    Enter a number (or 'done'): 4
+    Enter a number (or 'done'): 5
+    Enter a number (or 'done'): done
+    ```
+1. Choose the calculation you want, or quit
+    ```
+    Select an option:
+    1. Mean
+    2. Variance
+    3. Standard deviation
+    4. Standard error
+    5. Z-score
+    6. Summary
+    7. Quit
+    Enter your choice: 1
+    Mean = 3.0
+    ```
