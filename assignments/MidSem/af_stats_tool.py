@@ -18,11 +18,11 @@ class Input:
                 print("Invalid choice. Try again.")
 
     @staticmethod
-    def get_float(prompt: str, quit_on: str = "done") -> float | None:
+    def get_float(prompt: str, quit_on: str | None = None) -> float | None:
         while True:
             try:
                 inp = input(prompt)
-                if inp == quit_on:
+                if quit_on is not None and inp == quit_on:
                     return None
                 return float(inp)
             except ValueError:
