@@ -39,12 +39,11 @@ class Input:
 
 
 def main():
-    print("Input data:")
-    data = Input.get_floats("Enter a number (or 'done' to finish): ")
-    stats = SummaryStatistics(data)
+    stats = SummaryStatistics([])
     while True:
-        print("\nSelect an option:")
+        print(f"Select an option: [n = {stats.n()}]")
         choice = Input.select([
+            "Input new data",
             "Mean",
             "Variance",
             "Standard deviation",
@@ -53,23 +52,29 @@ def main():
             "Summary",
             "Quit"])
         if choice == 1:
-            print(f"Mean = {stats.mean()}")
+            print("Input data:")
+            data = Input.get_floats("Enter a number (or 'done' to finish): ")
+            stats.set_data(data)
         elif choice == 2:
-            print(f"Variance = {stats.variance()}")
+            print(f"Mean = {stats.mean()}")
         elif choice == 3:
-            print(f"Standard deviation = {stats.stdev()}")
+            print(f"Variance = {stats.variance()}")
         elif choice == 4:
-            print(f"Standard error = {stats.stderr()}")
+            print(f"Standard deviation = {stats.stdev()}")
         elif choice == 5:
+            print(f"Standard error = {stats.stderr()}")
+        elif choice == 6:
             x = Input.get_float("Enter a number: ")
             print(f"Z-score = {stats.z_score(x)}")
-        elif choice == 6:
+        elif choice == 7:
             print("Summary:")
             summary = stats.summary()
             for key, value in summary.items():
                 print(f"{key} = {value}")
-        elif choice == 7:
+        elif choice == 8:
             break
+
+        print("=========================================")
 
 
 if __name__ == "__main__":
