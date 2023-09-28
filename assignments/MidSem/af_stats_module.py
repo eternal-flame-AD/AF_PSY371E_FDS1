@@ -33,10 +33,3 @@ class SummaryStatistics:
 
     def z_score(self, x: float) -> float:
         return (x - self.mean())/self.stdev()
-
-    def summary(self) -> Mapping[str, float]:
-        return {
-            "mean": self.mean(),
-            "variance": self.variance(),
-            "stdev": self.stdev(),
-            "stderr": self.stderr()}
